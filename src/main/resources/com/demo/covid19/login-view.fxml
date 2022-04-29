@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="com.demo.covid19.LoginController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="575.0" text="COVID-19" textAlignment="CENTER">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="48.0" prefWidth="575.0">
+         <children>
+            <Label prefHeight="45.0" prefWidth="79.0" text="Username" textAlignment="CENTER" />
+            <TextField prefHeight="26.0" prefWidth="184.0" fx:id="textField" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="95.0" prefHeight="48.0" prefWidth="575.0">
+         <children>
+            <Label prefHeight="45.0" prefWidth="79.0" text="Password" textAlignment="CENTER" />
+            <PasswordField prefHeight="26.0" prefWidth="184.0" fx:id="passwordField"/>
+         </children>
+      </HBox>
+      <Pane prefHeight="41.0" prefWidth="575.0" />
+      <Button mnemonicParsing="false" prefWidth="54.0" text="Login" onAction="#login" />
+   </children>
+</VBox>
