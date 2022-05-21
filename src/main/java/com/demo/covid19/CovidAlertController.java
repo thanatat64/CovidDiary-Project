@@ -44,16 +44,19 @@ public class CovidAlertController {
     ConnectionDatabase connectionDatabase = new ConnectionDatabase();
 
     public void saveCovidAlert() throws Exception {
+
         int userId = 1;
         String sql = "INSERT INTO user_symptoms (user_id, cough, fever, sore_throat, tongue_does_not_taste, runny_nose, tired, panting, no_symptoms) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement ps = connectionDatabase.getConn().prepareStatement(sql);
 
+        cough = coughBox.isSelected();
         fever = feverBox.isSelected();
         soreThroat = soreThroatBox.isSelected();
         tongueDoesNotTaste = tongueDoesNotTasteBox.isSelected();
         runnyNose = runnyNoseBox.isSelected();
         tired = tiredBox.isSelected();
         panting = pantingBox.isSelected();
+
         if (noSymptoms = noSymptomsBox.isSelected()) {
             cough = false;
             fever = false;
@@ -72,7 +75,7 @@ public class CovidAlertController {
         ps.setBoolean(6, runnyNose);
         ps.setBoolean(7, tired);
         ps.setBoolean(8, panting);
-
+        ps.setBoolean(9, noSymptoms);
         ps.executeUpdate();
     }
 

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.DiaryController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.CovidAlertController">
     <top>
         <VBox prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
@@ -29,36 +29,36 @@
                 <HBox prefHeight="16.0" prefWidth="600.0">
                     <children>
                         <Label prefHeight="17.0" prefWidth="103.0" />
-                        <CheckBox mnemonicParsing="false" text="Cough" />
+                        <CheckBox mnemonicParsing="false" text="Cough" fx:id="coughBox"/>
                         <Label prefHeight="17.0" prefWidth="191.0" />
-                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="82.0" text="Fever" />
+                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="82.0" text="Fever" fx:id="feverBox" />
                     </children>
                 </HBox>
                 <Label />
                 <HBox prefHeight="16.0" prefWidth="600.0">
                     <children>
                         <Label prefHeight="17.0" prefWidth="103.0" />
-                        <CheckBox mnemonicParsing="false" text="Sore throat" />
+                        <CheckBox mnemonicParsing="false" text="Sore throat" fx:id="soreThroatBox"/>
                         <Label prefHeight="17.0" prefWidth="167.0" />
-                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="149.0" text="Tongue does not taste" />
+                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="149.0" text="Tongue does not taste" fx:id="tongueDoesNotTasteBox"/>
                     </children>
                 </HBox>
                 <Label />
                 <HBox prefHeight="12.0" prefWidth="600.0">
                     <children>
                         <Label prefHeight="17.0" prefWidth="103.0" />
-                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" text="Runny nose" />
+                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" text="Runny nose" fx:id="runnyNoseBox"/>
                         <Label prefHeight="17.0" prefWidth="156.0" />
-                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="87.0" text="Tired" />
+                        <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="87.0" text="Tired" fx:id="tiredBox"/>
                     </children>
                 </HBox>
                 <Label />
                 <HBox prefHeight="92.0" prefWidth="600.0">
                     <children>
                         <Label prefHeight="17.0" prefWidth="103.0" />
-                        <CheckBox mnemonicParsing="false" text="Panting" />
+                        <CheckBox mnemonicParsing="false" text="Panting" fx:id="pantingBox"/>
                         <Label prefHeight="17.0" prefWidth="186.0" />
-                        <CheckBox mnemonicParsing="false" text="No symptoms" />
+                        <CheckBox mnemonicParsing="false" text="No symptoms" fx:id="noSymptomsBox"/>
                     </children>
                 </HBox>
             </children>
@@ -68,7 +68,7 @@
         <HBox prefHeight="34.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
                 <Label prefHeight="33.0" prefWidth="533.0" />
-                <Button mnemonicParsing="false" text="SAVE" />
+                <Button mnemonicParsing="false" text="SAVE" onAction="#saveCovidAlert" />
             </children>
         </HBox>
     </bottom>
