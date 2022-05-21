@@ -3,6 +3,7 @@ package com.demo.covid19;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,19 +13,29 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.time.LocalDate;
 import java.time.chrono.Chronology;
+import java.util.ResourceBundle;
 
-public class DiaryController {
+public class DiaryController implements Initializable{
 
     @FXML
     DatePicker datePicker;
 
     @FXML
     ChoiceBox<String> choiceBox;
+    private String[] country = {"Kamphaeng Phet", "Chiang Rai", "Chiang Mai", "Tak", "Nakhon Sawan", "Nan", "Phichit", "Phitsanulok", "Phetchabun", "Phrae"
+            , "Mae Hong Son", "Lampang", "Lamphun", "Sukhothai", "Uttaradit", "Uthai Thani", "Phayao", "Bangkok", "Kanchanaburi", "Chanthaburi"
+            , "Chachoengsao", "Chon Buri", "Trat", "Nakhon Nayok", "Nakhon Pathom", "Nonthaburi", "Pathum Thani", "Prachuap Khiri Khan", "Prachin Buri", "Phra Nakhon Si Ayutthaya"
+            , "Phetchaburi", "Rayong", "Ratchaburi", "Lop Buri", "Samut Prakan", "Samut Songkhram", "Samut Sakhon", "Saraburi", "Sing Buri", "Suphan Buri"
+            , "Ang Thong", "Sa Kaeo", "Kalasin", "Khon Kaen", "Chaiyaphum", "Yasothon", "Nakhon Phanom", "Nakhon Ratchasima", "Buri Ram", "Maha Sarakham"
+            , "Roi Et", "Loei", "Si Sa Ket", "Sakon Nakhon", "Surin", "Nong Khai", "Udon Thani", "Ubon Ratchathani", "Mukdahan", "Amnat Charoen"
+            , "Nong Bua Lam Phu", "Krabi", "Chumphon", "Trang", "Nakhon Si Thammarat", "Narathiwat", "Pattani", "Phangnga", "Phatthalung", "Phuket"
+            , "Yala", "Ranong", "Songkhla", "Satun", "Surat Thani", "Chai Nat"};
 
     @FXML
     TextField textField;
@@ -80,5 +91,17 @@ public class DiaryController {
         }
     }
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        choiceBox.getItems().addAll(country);
+        choiceBox.setOnAction(this::getCountry);
+    }
+
+    public void getCountry(ActionEvent event) {
+
+        String myCountry = choiceBox.getValue();
+
+    }
 }
 
