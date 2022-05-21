@@ -48,10 +48,10 @@ public class LoginController {
 
             // Check password is correct
             if (BCrypt.checkpw(password, hashedPassword)) {
+                UserHolder.getInstance().setUserId(rs.getInt("id"));
                 // Go to next scene
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("home-view.fxml"));
                 root = loader.load();
-
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
@@ -62,8 +62,26 @@ public class LoginController {
         } else {
             System.out.println("User " + username + " not found");
         }
+
     }
 
+    @FXML
+    private void sendData (ActionEvent event) {
+        int userId = 0;
+        Node node = (Node) event.getSource();
+        stage = (Stage) node.getScene().getWindow();
+        stage.close();
 
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("covid-alert-view.fxml"));
+            root = loader.load();
+            stage.setUserData(userId);
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            System.out.println(String.format("Error: %s", e.getMessage()));
+        }
+    }
 
 }

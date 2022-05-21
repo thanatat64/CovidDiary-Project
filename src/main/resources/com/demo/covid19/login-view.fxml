@@ -30,6 +30,6 @@
          </children>
       </HBox>
       <Pane prefHeight="41.0" prefWidth="575.0" />
-      <Button mnemonicParsing="false" prefWidth="54.0" text="Login" onAction="#login" />
+      <Button mnemonicParsing="false" prefWidth="54.0" text="Login" onAction="#login"  />
    </children>
 </VBox>

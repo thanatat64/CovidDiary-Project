@@ -24,7 +24,7 @@ public class DiaryController {
     DatePicker datePicker;
 
     @FXML
-    ChoiceBox choiceBox;
+    ChoiceBox<String> choiceBox;
 
     @FXML
     TextField textField;

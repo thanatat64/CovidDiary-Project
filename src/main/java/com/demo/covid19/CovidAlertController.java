@@ -1,9 +1,13 @@
 package com.demo.covid19;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
+import javafx.stage.Stage;
 
-import java.sql.PreparedStatement;
+import java.net.URL;
+import java.sql.*;
+import java.util.ResourceBundle;
 
 public class CovidAlertController {
 
@@ -40,12 +44,16 @@ public class CovidAlertController {
     private boolean panting;
     private boolean noSymptoms;
 
+
     // Get database connection
     ConnectionDatabase connectionDatabase = new ConnectionDatabase();
 
     public void saveCovidAlert() throws Exception {
+        System.out.println(UserHolder.getInstance().getUserId());
 
-        int userId = 1;
+        int userID = UserHolder.getInstance().getUserId();
+        Statement stmt = connectionDatabase.getConn().createStatement();
+
         String sql = "INSERT INTO user_symptoms (user_id, cough, fever, sore_throat, tongue_does_not_taste, runny_nose, tired, panting, no_symptoms) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement ps = connectionDatabase.getConn().prepareStatement(sql);
 
@@ -67,7 +75,7 @@ public class CovidAlertController {
             panting = false;
         }
 
-        ps.setInt(1, userId);
+        ps.setInt(1, userID);
         ps.setBoolean(2, cough);
         ps.setBoolean(3, fever);
         ps.setBoolean(4, soreThroat);
