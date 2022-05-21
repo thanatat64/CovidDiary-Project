@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.DiaryController">
    <top>
       <VBox prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -27,28 +27,19 @@
    <left>
       <VBox prefHeight="369.0" prefWidth="107.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="119.0" text="HOME" />
+            <Button mnemonicParsing="false" onAction="#goToSceneHome" prefHeight="33.0" prefWidth="119.0" text="HOME" />
             <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="119.0" text="DIARY" />
-            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" text="SHOW DIARY" />
+            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" text="SHOW DIARY"  onAction="#goToSceneShowDiary" />
             <Label prefHeight="158.0" prefWidth="107.0" />
-            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="110.0" text="COVID ALERT" />
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="107.0" text="LOG OUT" />
+            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="110.0" text="COVID ALERT" onAction="#goToSceneCovidAlert"/>
+            <Button mnemonicParsing="false" onAction="#goToSceneLogin" prefHeight="31.0" prefWidth="107.0" text="LOG OUT" />
          </children>
       </VBox>
    </left>
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="43.0" prefWidth="493.0">
-               <children>
-                  <Label prefHeight="50.0" prefWidth="119.0" text="  DIARY">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <Label prefHeight="9.0" prefWidth="37.0" />
+            <Label prefHeight="0.0" prefWidth="37.0" />
             <HBox prefHeight="28.0" prefWidth="493.0">
                <children>
                   <Label prefHeight="32.0" prefWidth="130.0" text="    DATE">
@@ -56,7 +47,7 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <DatePicker prefHeight="28.0" prefWidth="188.0" />
+                  <DatePicker prefHeight="28.0" prefWidth="188.0" promptText="Enter a date" />
                </children>
             </HBox>
             <Label />
@@ -67,7 +58,7 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox prefHeight="26.0" prefWidth="186.0" />
+                  <ChoiceBox prefHeight="26.0" prefWidth="187.0" />
                </children>
             </HBox>
             <Label />

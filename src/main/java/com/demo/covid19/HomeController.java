@@ -43,4 +43,30 @@ public class HomeController {
         stage.show();
     }
 
+    public void goToSceneShowDiary (ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("showDiary-view.fxml"));
+        root = loader.load();
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void goToSceneCovidAlert (ActionEvent event) throws IOException {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("covidAlert-view.fxml"));
+            root = loader.load();
+
+            stage = new Stage();
+            stage.setTitle("COVID ALERT");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (Exception e) {
+            System.out.println("Can't load new window");
+        }
+    }
+
 }

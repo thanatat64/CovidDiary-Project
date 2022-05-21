@@ -52,9 +52,6 @@ public class LoginController {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("home-view.fxml"));
                 root = loader.load();
 
-//                HomeController scene2Controller = loader.getController();
-//                scene2Controller.displayEmail(username);
-
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
@@ -65,8 +62,6 @@ public class LoginController {
         } else {
             System.out.println("User " + username + " not found");
         }
-
-
-
     }
+
 }
