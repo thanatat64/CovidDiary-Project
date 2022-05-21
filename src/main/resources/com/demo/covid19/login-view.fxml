@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-   fx:controller="com.demo.covid19.LoginController">
+      fx:controller="com.demo.covid19.LoginController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="575.0" text="COVID-19" textAlignment="CENTER">
          <font>

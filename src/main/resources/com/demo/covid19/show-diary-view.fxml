@@ -6,14 +6,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.demo.covid19.HomeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.ShowDiaryController">
     <top>
         <VBox prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
                 <Label />
-                <Label prefHeight="41.0" prefWidth="600.0" text="                                                   HOME" textAlignment="CENTER">
+                <Label prefHeight="41.0" prefWidth="600.0" text="                                            SHOW DIARY" textAlignment="CENTER">
                     <font>
                         <Font size="25.0" />
                     </font>
@@ -25,12 +23,12 @@
     <left>
         <VBox prefHeight="369.0" prefWidth="107.0" BorderPane.alignment="CENTER">
             <children>
-                <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="119.0" text="HOME" />
-                <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="119.0" text="DIARY" onAction="#goToSceneDiary"/>
-                <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" text="SHOW DIARY" onAction="#goToSceneShowDiary" />
+                <Button mnemonicParsing="false" onAction="#goToSceneHome" prefHeight="33.0" prefWidth="119.0" text="HOME" />
+                <Button mnemonicParsing="false" onAction="#goToSceneDiary" prefHeight="33.0" prefWidth="119.0" text="DIARY" />
+                <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" text="SHOW DIARY" />
                 <Label prefHeight="158.0" prefWidth="107.0" />
-                <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="110.0" text="COVID ALERT" onAction="#goToSceneCovidAlert"/>
-                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="107.0" text="LOG OUT" onAction="#goToSceneLogin"/>
+                <Button mnemonicParsing="false" onAction="#goToSceneCovidAlert" prefHeight="33.0" prefWidth="110.0" text="COVID ALERT" />
+                <Button mnemonicParsing="false" onAction="#goToSceneLogin" prefHeight="31.0" prefWidth="107.0" text="LOG OUT" />
             </children>
         </VBox>
     </left>

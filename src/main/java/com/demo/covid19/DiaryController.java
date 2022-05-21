@@ -45,7 +45,7 @@ public class DiaryController {
     }
 
     public void goToSceneShowDiary(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("showDiary-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("show-diary-view.fxml"));
         root = loader.load();
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -67,7 +67,7 @@ public class DiaryController {
     public void goToSceneCovidAlert(ActionEvent event) throws IOException {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("covidAlert-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("covid-alert-view.fxml"));
             root = loader.load();
 
             stage = new Stage();
