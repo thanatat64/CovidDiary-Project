@@ -80,7 +80,6 @@ public class DiaryController implements Initializable{
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("covid-alert-view.fxml"));
             root = loader.load();
-
             stage = new Stage();
             stage.setTitle("COVID ALERT");
             stage.setScene(new Scene(root));

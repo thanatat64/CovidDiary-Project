@@ -17,7 +17,7 @@
             <Image url="@images/material-design-abstract-8k-1280x800.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="257.0" layoutY="145.0" prefHeight="357.0" prefWidth="400.0" style="-fx-background-color: #515A5A;">
+      <AnchorPane layoutX="257.0" layoutY="145.0" prefHeight="357.0" prefWidth="400.0" style="-fx-background-color: #273746;">
          <children>
             <Label layoutX="147.0" layoutY="22.0" text="Login" textFill="WHITE">
                <font>
@@ -67,7 +67,6 @@
       </Label>
       <Label layoutX="797.0" layoutY="586.0" text="64010312 Thanatat">
          <font>
-            <Font name="Leelawadee UI" size="12.0" />
          </font>
       </Label>
       <Label layoutX="797.0" layoutY="603.0" text="64010267 Nichapat">

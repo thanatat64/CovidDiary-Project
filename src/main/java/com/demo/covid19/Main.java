@@ -7,13 +7,25 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class Main extends Application {
-
+    private double x,y;
     @Override
     public void start(Stage stage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("login-view.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            //mouse event
+            root.setOnMousePressed(event -> {
+                x = event.getSceneX();
+                y = event.getSceneY();
+            });
+            root.setOnMouseDragged(event -> {
+
+                stage.setX(event.getScreenX() - x);
+                stage.setY(event.getScreenY() - y);
+
+            });
+            //mouseevent
             stage.show();
         } catch(Exception e) {
             e.printStackTrace();
