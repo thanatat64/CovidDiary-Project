@@ -38,7 +38,7 @@ public class EditDiaryController implements Initializable {
     private Scene scene;
     private Parent root;
 
-    public void saveDiary(ActionEvent event) {
+    public void saveEditDiary(ActionEvent event) {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();

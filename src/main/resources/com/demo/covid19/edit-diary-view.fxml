@@ -72,7 +72,7 @@
          <children>
             <Label prefHeight="33.0" prefWidth="412.0" />
             <Label prefHeight="28.0" prefWidth="68.0" />
-            <Button mnemonicParsing="false" onAction="#saveDiary" prefHeight="26.0" prefWidth="53.0" text="SAVE" />
+            <Button mnemonicParsing="false" onAction="#saveEditDiary" prefHeight="26.0" prefWidth="53.0" text="SAVE" />
          </children>
       </HBox>
    </bottom>
