@@ -1,4 +1,4 @@
-module com.demo.covid19 {
+module com.demo.covid {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;

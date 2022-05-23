@@ -4,37 +4,81 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="575.0" style="-fx-background-color: LemonChiffon;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="913.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.LoginController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="94.0" prefWidth="575.0" style="-fx-background-color: lightsalmon;" text="COVID-19" textAlignment="CENTER">
+      <ImageView fitHeight="646.0" fitWidth="920.0" layoutX="-3.0">
+         <image>
+            <Image url="@images/material-design-abstract-8k-1280x800.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="257.0" layoutY="145.0" prefHeight="357.0" prefWidth="400.0" style="-fx-background-color: #515A5A;">
+         <children>
+            <Label layoutX="147.0" layoutY="22.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="40.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="147.0" layoutY="79.0" prefHeight="5.0" prefWidth="106.0" style="-fx-background-color: #E9967A;" />
+            <TextField fx:id="textField" layoutX="91.0" layoutY="115.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.62" prefHeight="44.0" prefWidth="218.0" promptText="Username" style="-fx-background-color: #839192;">
+               <font>
+                  <Font name="Leelawadee UI" size="13.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </TextField>
+            <PasswordField fx:id="passwordField" layoutX="91.0" layoutY="190.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.62" prefHeight="44.0" prefWidth="218.0" promptText="Password" style="-fx-background-color: #839192; -fx-cursor: #FDFEFE;">
+               <font>
+                  <Font name="Leelawadee UI" size="15.0" />
+               </font>
+            </PasswordField>
+            <Button layoutX="79.0" layoutY="271.0" mnemonicParsing="false" onAction="#login" prefHeight="44.0" prefWidth="243.0" style="-fx-background-color: #F08080; -fx-background-radius: 90;" text="Login">
+               <font>
+                  <Font name="Leelawadee UI" size="21.0" />
+               </font>
+            </Button>
+            <ImageView layoutX="47.0" layoutY="196.0">
+               <image>
+                  <Image url="@images/icons8_password_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="47.0" layoutY="121.0">
+               <image>
+                  <Image url="@images/icons8_user_24px_6.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="509.0" layoutY="533.0" text="king mongkut's university of technology ladkrabang">
          <font>
-            <Font size="41.0" />
+            <Font name="Leelawadee UI" size="17.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" layoutX="10.0" layoutY="95.0" prefHeight="26.0" prefWidth="575.0" />
-      <Pane prefHeight="192.0" prefWidth="575.0">
-         <children>
-            <Label layoutX="141.0" layoutY="119.0" prefHeight="45.0" prefWidth="79.0" text="Password" textAlignment="CENTER">
-               <font>
-                  <Font size="16.0" />
-               </font></Label>
-            <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="238.0" layoutY="128.0" prefHeight="26.0" prefWidth="184.0" />
-            <TextField fx:id="textField" centerShape="false" layoutX="239.0" layoutY="70.0" prefHeight="26.0" prefWidth="182.0" />
-            <Label layoutX="141.0" layoutY="61.0" prefHeight="45.0" prefWidth="79.0" text="Username" textAlignment="CENTER">
-               <font>
-                  <Font size="16.0" />
-               </font></Label>
-         </children></Pane>
-      <Pane prefHeight="21.0" prefWidth="575.0" />
-      <Button mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: DarkKhaki;" text="LOGIN" textAlignment="CENTER">
+      <Label layoutX="702.0" layoutY="559.0" prefHeight="21.0" prefWidth="202.0" text="object oriented programming">
          <font>
-            <Font size="16.0" />
+            <Font size="15.0" />
          </font>
-      </Button>
+      </Label>
+      <Label layoutX="797.0" layoutY="586.0" text="64010312 Thanatat">
+         <font>
+            <Font name="Leelawadee UI" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="797.0" layoutY="603.0" text="64010267 Nichapat">
+         <font>
+            <Font name="Leelawadee UI" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="788.0" layoutY="621.0" text="64010359 Tanchanok">
+         <font>
+            <Font name="Leelawadee UI" size="12.0" />
+         </font>
+      </Label>
    </children>
-</VBox>
+</AnchorPane>
