@@ -9,27 +9,32 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.demo.covid19.LoginController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="575.0" style="-fx-background-color: LemonChiffon;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.LoginController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="575.0" text="COVID-19" textAlignment="CENTER">
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="94.0" prefWidth="575.0" style="-fx-background-color: lightsalmon;" text="COVID-19" textAlignment="CENTER">
          <font>
             <Font size="41.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" prefHeight="48.0" prefWidth="575.0">
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="95.0" prefHeight="26.0" prefWidth="575.0" />
+      <Pane prefHeight="192.0" prefWidth="575.0">
          <children>
-            <Label prefHeight="45.0" prefWidth="79.0" text="Username" textAlignment="CENTER" />
-            <TextField prefHeight="26.0" prefWidth="184.0" fx:id="textField" />
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="10.0" layoutY="95.0" prefHeight="48.0" prefWidth="575.0">
-         <children>
-            <Label prefHeight="45.0" prefWidth="79.0" text="Password" textAlignment="CENTER" />
-            <PasswordField prefHeight="26.0" prefWidth="184.0" fx:id="passwordField"/>
-         </children>
-      </HBox>
-      <Pane prefHeight="41.0" prefWidth="575.0" />
-      <Button mnemonicParsing="false" prefWidth="54.0" text="Login" onAction="#login"  />
+            <Label layoutX="141.0" layoutY="119.0" prefHeight="45.0" prefWidth="79.0" text="Password" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="238.0" layoutY="128.0" prefHeight="26.0" prefWidth="184.0" />
+            <TextField fx:id="textField" centerShape="false" layoutX="239.0" layoutY="70.0" prefHeight="26.0" prefWidth="182.0" />
+            <Label layoutX="141.0" layoutY="61.0" prefHeight="45.0" prefWidth="79.0" text="Username" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+         </children></Pane>
+      <Pane prefHeight="21.0" prefWidth="575.0" />
+      <Button mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: DarkKhaki;" text="LOGIN" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
    </children>
 </VBox>
