@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 
-public class SaveController {
+public class OkController {
 
     public void OkButton(ActionEvent event){
 

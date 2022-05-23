@@ -100,7 +100,7 @@ public class DiaryController implements Initializable{
     public void saveDiary(ActionEvent event) {
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("save-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ok-view.fxml"));
             root = loader.load();
 
             stage = new Stage();
@@ -110,6 +110,7 @@ public class DiaryController implements Initializable{
         } catch (Exception e) {
             System.out.println("it's can't save");
         }
+
 
 
         //save date to database
