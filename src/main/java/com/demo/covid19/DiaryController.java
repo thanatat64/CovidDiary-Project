@@ -18,7 +18,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.time.LocalDate;
-import java.time.chrono.Chronology;
 import java.util.ResourceBundle;
 
 public class DiaryController implements Initializable{
@@ -95,13 +94,58 @@ public class DiaryController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         choiceBox.getItems().addAll(country);
-        choiceBox.setOnAction(this::getCountry);
-    }
-
-    public void getCountry(ActionEvent event) {
-
-        String myCountry = choiceBox.getValue();
 
     }
+
+    public void saveDiary(ActionEvent event) {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("save-view.fxml"));
+            root = loader.load();
+
+            stage = new Stage();
+            stage.setTitle("SAVE");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("it's can't save");
+        }
+
+
+        //save date to database
+
+        //save country to database
+
+        //save detail to database
+    }
+
+//
+//    public void insert() throws Exception {
+//        ConnectionDatabase connectionDatabase = new ConnectionDatabase();
+//        String sql = "INSERT INTO users (username, created_date) VALUE (?, ?)";
+//        PreparedStatement statement  = connectionDatabase.getConn().prepareStatement(sql);
+//        statement.setString(1, userna);
+//
+//    }
+
+//    public void getData(ActionEvent event) {
+//
+//        String myCountry = choiceBox.getValue();
+//        LocalDate myDate = datePicker.getValue();
+//        String myTextField = textField.getText();
+//
+//    }
+
+
+
+//    public void insert() throws Exception {
+//        Connection conn = null;
+//        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "P@ssw0rd");
+//        String sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+//        PreparedStatement statement = conn.prepareStatement(sql);
+//        statement.setString(1, "Nichapat");
+//        statement.setString(2, "password");
+//        statement.execute();
+//    }
 }
 

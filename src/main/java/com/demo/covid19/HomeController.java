@@ -69,4 +69,8 @@ public class HomeController {
         }
     }
 
+    public void showAllAdvertise() {
+        //แสดงว่าติดโควิดกี่คน มีอาการอะไรบ้าง จาก database
+    }
+
 }

@@ -79,7 +79,7 @@
       <HBox prefHeight="34.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <Label prefHeight="33.0" prefWidth="533.0" />
-            <Button mnemonicParsing="false" text="SAVE" />
+            <Button mnemonicParsing="false" text="SAVE" onAction="#saveDiary" />
          </children>
       </HBox>
    </bottom>

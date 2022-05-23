@@ -67,5 +67,9 @@ public class ShowDiaryController {
             System.out.println("Can't load new window");
         }
     }
+
+    public void showAllYourDiary (){
+
+    }
 }
 
