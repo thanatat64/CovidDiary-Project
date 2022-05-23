@@ -90,11 +90,26 @@ public class DiaryController implements Initializable{
         }
     }
 
+    public void goToSceneEditDiary(ActionEvent event) throws IOException {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("edit-diary-view.fxml"));
+            root = loader.load();
+
+            stage = new Stage();
+            stage.setTitle("EDIT DIARY");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (Exception e) {
+            System.out.println("Can't load new window");
+        }
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         choiceBox.getItems().addAll(country);
-
     }
 
     public void saveDiary(ActionEvent event) {

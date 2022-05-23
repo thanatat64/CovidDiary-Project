@@ -29,9 +29,9 @@
          <children>
             <Button mnemonicParsing="false" onAction="#goToSceneHome" prefHeight="33.0" prefWidth="119.0" text="HOME" />
             <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="119.0" text="DIARY" />
-            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" text="SHOW DIARY"  onAction="#goToSceneShowDiary" />
+            <Button mnemonicParsing="false" onAction="#goToSceneShowDiary" prefHeight="33.0" prefWidth="117.0" text="SHOW DIARY" />
             <Label prefHeight="158.0" prefWidth="107.0" />
-            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="110.0" text="COVID ALERT" onAction="#goToSceneCovidAlert"/>
+            <Button mnemonicParsing="false" onAction="#goToSceneCovidAlert" prefHeight="33.0" prefWidth="110.0" text="COVID ALERT" />
             <Button mnemonicParsing="false" onAction="#goToSceneLogin" prefHeight="31.0" prefWidth="107.0" text="LOG OUT" />
          </children>
       </VBox>
@@ -58,7 +58,7 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <ChoiceBox prefHeight="26.0" prefWidth="187.0" fx:id="choiceBox"/>
+                  <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="187.0" />
                </children>
             </HBox>
             <Label />
@@ -78,8 +78,10 @@
    <bottom>
       <HBox prefHeight="34.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="33.0" prefWidth="533.0" />
-            <Button mnemonicParsing="false" text="SAVE" onAction="#saveDiary" />
+            <Label prefHeight="33.0" prefWidth="393.0" />
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="60.0" text="EDIT" onAction="#goToSceneEditDiary" />
+            <Label prefHeight="28.0" prefWidth="63.0" />
+            <Button mnemonicParsing="false" onAction="#saveDiary" prefHeight="26.0" prefWidth="56.0" text="SAVE" />
          </children>
       </HBox>
    </bottom>
