@@ -39,7 +39,7 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <DatePicker prefHeight="28.0" prefWidth="188.0" promptText="Enter a date" />
+                  <DatePicker fx:id="datePicker" prefWidth="188.0" promptText="Enter a date" />
                </children>
             </HBox>
             <Label />
@@ -61,7 +61,7 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="142.0" prefWidth="336.0" />
+                  <TextField fx:id="textField" prefWidth="336.0" />
                </children>
             </HBox>
          </children>

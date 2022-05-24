@@ -140,7 +140,7 @@
                         <Font name="Leelawadee UI" size="30.0" />
                      </font>
                   </Label>
-                  <DatePicker prefHeight="45.0" prefWidth="390.0" />
+                  <DatePicker fx:id="datePicker" prefHeight="45.0" prefWidth="390.0" />
                </children>
             </HBox>
             <AnchorPane prefHeight="35.0" prefWidth="986.0" />
@@ -162,7 +162,7 @@
                         <Font name="Leelawadee UI" size="30.0" />
                      </font>
                   </Label>
-                  <TextField alignment="TOP_LEFT" opacity="0.61" prefHeight="329.0" prefWidth="670.0" style="-fx-background-color: #FFA07A; -fx-background-radius: 12;">
+                  <TextField fx:id="textField" opacity="0.61" prefHeight="329.0" prefWidth="670.0" style="-fx-background-color: #FFA07A; -fx-background-radius: 12;">
                      <font>
                         <Font name="Leelawadee UI" size="15.0" />
                      </font>
@@ -175,7 +175,7 @@
                   <AnchorPane prefHeight="37.0" prefWidth="642.0" />
                   <Button mnemonicParsing="false" onAction="#goToSceneEditDiary" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #2C3E50;" text="EDIT" textFill="WHITE" />
                   <AnchorPane prefHeight="37.0" prefWidth="52.0" />
-                  <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #2C3E50;" text="SAVE" textFill="#f8f8f8" />
+                  <Button mnemonicParsing="false" onAction="#saveDiary" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #2C3E50;" text="SAVE" textFill="#f8f8f8" />
                </children>
             </HBox>
          </children>

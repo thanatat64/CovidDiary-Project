@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -22,6 +23,9 @@ public class LoginController {
     @FXML
     PasswordField passwordField;
 
+    @FXML
+    Button loginButton;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -32,6 +36,9 @@ public class LoginController {
         // Get data from forms
         String username = textField.getText();
         String password = passwordField.getText();
+
+        //check enter to login
+        
 
         // Get database connection
         ConnectionDatabase connectionDatabase = new ConnectionDatabase();

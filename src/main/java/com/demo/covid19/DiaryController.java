@@ -14,9 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
@@ -106,13 +104,79 @@ public class DiaryController implements Initializable{
         }
     }
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         choiceBox.getItems().addAll(country);
     }
 
-    public void saveDiary(ActionEvent event) {
+    // Get database connection
+    ConnectionDatabase connectionDatabase = new ConnectionDatabase();
+
+    public void saveDiary(ActionEvent event) throws Exception {
+
+        LocalDate date = datePicker.getValue();
+
+        String myCountry = choiceBox.getValue();
+
+        String myContent = textField.getText();
+
+        System.out.println(UserHolder.getInstance().getUserId());
+
+        int userID = UserHolder.getInstance().getUserId();
+        Statement stmt = connectionDatabase.getConn().createStatement();
+
+        String selectDiarySQL = "select * from user_diaries where user_id = ? and date = ? limit 1";
+        PreparedStatement ps = connectionDatabase.getConn().prepareStatement(selectDiarySQL);
+        ps.setInt(1, userID);
+        ps.setDate(2, Date.valueOf(date));
+        ResultSet rs = ps.executeQuery();
+
+        if (rs.next()) {
+//            int diaryId = rs.getInt("id");
+//
+//            String updateDiarySQL = "update user_diaries set country = ?, content = ? where id = ?";
+//            PreparedStatement ps2 = connectionDatabase.getConn().prepareStatement(updateDiarySQL);
+//
+//            ps2.setString(1, myCountry);
+//            ps2.setString(2, myContent);
+//            ps2.setInt(3, diaryId);
+//            ps2.executeUpdate();
+
+        } else {
+            String insertAll = "INSERT INTO user_diaries (user_id, date, country, content) VALUES (?, ?, ?, ?)";
+            PreparedStatement ps3 = connectionDatabase.getConn().prepareStatement(insertAll);
+
+            //save date, country, content to database
+
+            ps3.setInt(1, userID);
+            ps3.setDate(2, Date.valueOf(date));
+            ps3.setString(3, myCountry);
+            ps3.setString(4, myContent);
+            ps3.executeUpdate();
+        }
+
+//        LocalDate date = datePicker.getValue();
+//
+//        String myCountry = choiceBox.getValue();
+//
+//        String myContent = textField.getText();
+//
+//
+//        System.out.println(UserHolder.getInstance().getUserId());
+//
+//        int userID = UserHolder.getInstance().getUserId();
+//        Statement stmt = connectionDatabase.getConn().createStatement();
+//
+//        String sql = "INSERT INTO user_diaries (user_id, date, country, content) VALUES (?, ?, ?, ?)";
+//        PreparedStatement ps = connectionDatabase.getConn().prepareStatement(sql);
+//
+//        //save date, country, content to database
+//
+//        ps.setInt(1, userID);
+//        ps.setDate(2, Date.valueOf(date));
+//        ps.setString(3, myCountry);
+//        ps.setString(4, myContent);
+//        ps.executeUpdate();
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ok-view.fxml"));
@@ -127,12 +191,6 @@ public class DiaryController implements Initializable{
         }
 
 
-
-        //save date to database
-
-        //save country to database
-
-        //save detail to database
     }
 
 //
@@ -165,3 +223,4 @@ public class DiaryController implements Initializable{
 //    }
 }
 
+// INSERT INTO user_diaries (user_id, date, country, content) VALUES (?, ?, ?, ?);
