@@ -1,4 +1,4 @@
-package com.demo.covid19;
+package com.demo.covid19.Connection;
 
 import org.mindrot.jbcrypt.BCrypt;
 

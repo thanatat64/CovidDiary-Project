@@ -1,4 +1,4 @@
-package com.demo.covid19;
+package com.demo.covid19.Classes;
 
 import java.sql.*;
 

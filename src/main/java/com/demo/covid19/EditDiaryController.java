@@ -1,5 +1,7 @@
 package com.demo.covid19;
 
+import com.demo.covid19.Classes.UserHolder;
+import com.demo.covid19.Connection.ConnectionDatabase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,7 +11,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;

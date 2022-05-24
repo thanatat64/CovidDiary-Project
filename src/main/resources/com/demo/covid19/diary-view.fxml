@@ -189,4 +189,7 @@
          </children>
       </VBox>
    </center>
+   <bottom>
+      <Pane prefHeight="20.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>
