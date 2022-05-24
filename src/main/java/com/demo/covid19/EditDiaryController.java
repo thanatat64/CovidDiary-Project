@@ -2,13 +2,13 @@ package com.demo.covid19;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -38,7 +38,7 @@ public class EditDiaryController implements Initializable {
             , "Yala", "Ranong", "Songkhla", "Satun", "Surat Thani", "Chai Nat"};
 
     @FXML
-    TextField textField;
+    TextArea editText;
 
     private Stage stage;
     private Scene scene;
@@ -51,9 +51,9 @@ public class EditDiaryController implements Initializable {
 
         LocalDate date = datePicker.getValue();
 
-        String myCountry = choiceBox.getValue();
+        String myProvince = choiceBox.getValue();
 
-        String myContent = textField.getText();
+        String myContent = editText.getText();
 
         System.out.println(UserHolder.getInstance().getUserId());
 
@@ -72,7 +72,7 @@ public class EditDiaryController implements Initializable {
             String updateDiarySQL = "update user_diaries set country = ?, content = ? where id = ?";
             PreparedStatement ps2 = connectionDatabase.getConn().prepareStatement(updateDiarySQL);
 
-            ps2.setString(1, myCountry);
+            ps2.setString(1, myProvince);
             ps2.setString(2, myContent);
             ps2.setInt(3, diaryId);
             ps2.executeUpdate();
@@ -85,7 +85,7 @@ public class EditDiaryController implements Initializable {
 
             ps3.setInt(1, userID);
             ps3.setDate(2, Date.valueOf(date));
-            ps3.setString(3, myCountry);
+            ps3.setString(3, myProvince);
             ps3.setString(4, myContent);
             ps3.executeUpdate();
         }

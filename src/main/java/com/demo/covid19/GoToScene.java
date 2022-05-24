@@ -16,7 +16,7 @@ public class GoToScene {
     private Scene scene;
     private Parent root;
 
-    GoToScene() {
+    public GoToScene() {
 
     }
 

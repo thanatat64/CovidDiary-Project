@@ -1,8 +1,6 @@
 package com.demo.covid19;
 
 import java.sql.*;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MySQLPlayground {
 

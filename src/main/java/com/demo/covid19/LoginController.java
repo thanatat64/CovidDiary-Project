@@ -15,7 +15,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class LoginController extends GoToScene{
+public class LoginController extends GoToScene {
 
     @FXML
     TextField textField;

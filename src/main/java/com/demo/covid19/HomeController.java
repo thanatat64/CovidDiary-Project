@@ -2,15 +2,10 @@ package com.demo.covid19;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import org.mindrot.jbcrypt.BCrypt;
 import  javafx.fxml.Initializable;
 import java.io.IOException;
 import java.net.URL;
@@ -48,7 +43,7 @@ public class HomeController extends GoToScene implements Initializable{
         super.goToSceneCovidAlert(event);
     }
 
-    private int queryCount(String sql,ConnectionDatabase connectionDatabase)throws SQLException{
+    private int queryCount(String sql, ConnectionDatabase connectionDatabase)throws SQLException{
         try {
             PreparedStatement ps = connectionDatabase.getConn().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();

@@ -4,19 +4,18 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.demo.covid19.EditDiaryController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.EditDiaryController">
    <top>
       <VBox prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <Label />
-            <Label prefHeight="41.0" prefWidth="600.0" text="                                                EDIT DIARY" textAlignment="CENTER">
+            <Label prefHeight="41.0" prefWidth="600.0" text="                                 EDIT DIARY" textAlignment="CENTER">
                <font>
                   <Font size="25.0" />
                </font>
@@ -45,7 +44,7 @@
             <Label />
             <HBox prefHeight="15.0" prefWidth="493.0">
                <children>
-                  <Label prefHeight="24.0" prefWidth="132.0" text="   COUNTRY">
+                  <Label prefHeight="24.0" prefWidth="132.0" text="   PROVINCE">
                      <font>
                         <Font size="19.0" />
                      </font>
@@ -61,7 +60,11 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="textField" prefWidth="336.0" />
+                  <TextArea fx:id="editText" prefHeight="145.0" prefWidth="316.0" wrapText="true">
+                     <font>
+                        <Font name="Leelawadee UI" size="13.0" />
+                     </font>
+                  </TextArea>
                </children>
             </HBox>
          </children>
