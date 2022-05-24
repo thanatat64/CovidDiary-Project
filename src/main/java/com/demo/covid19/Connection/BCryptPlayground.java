@@ -5,7 +5,7 @@ import org.mindrot.jbcrypt.BCrypt;
 public class BCryptPlayground {
 
     public static void main(String... args) {
-        String password = "123456";
+        String password = "1";
 //        String hashedPassword = "$2a$10$Y9KsSjabinBHJvWVVS3SvuJBWRWRcS75qQ9Dt0HEXMcdr5qDuMLne";
         String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
 
