@@ -17,6 +17,11 @@
             <Image url="@images/material-design-abstract-8k-1280x800.jpg" />
          </image>
       </ImageView>
+      <Label layoutX="305.0" layoutY="45.0" text="COVID DIARY" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI Bold" size="50.0" />
+         </font>
+      </Label>
       <AnchorPane layoutX="257.0" layoutY="145.0" prefHeight="357.0" prefWidth="400.0" style="-fx-background-color: #273746;">
          <children>
             <Label layoutX="147.0" layoutY="22.0" text="Login" textFill="WHITE">
@@ -25,15 +30,15 @@
                </font>
             </Label>
             <AnchorPane layoutX="147.0" layoutY="79.0" prefHeight="5.0" prefWidth="106.0" style="-fx-background-color: #E9967A;" />
-            <TextField fx:id="textField" layoutX="91.0" layoutY="115.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.62" prefHeight="44.0" prefWidth="218.0" promptText="Username" style="-fx-background-color: #839192;">
+            <TextField fx:id="textField" layoutX="91.0" layoutY="115.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.62" prefHeight="44.0" prefWidth="218.0" promptText="Username" style="-fx-background-color: #839192; -fx-prompt-text-fill: #FFFFFF; -fx-text-fill: #FFFFFF;">
                <font>
-                  <Font name="Leelawadee UI" size="13.0" />
+                  <Font name="Leelawadee UI" size="15.0" />
                </font>
                <effect>
                   <ColorAdjust />
                </effect>
             </TextField>
-            <PasswordField fx:id="passwordField" layoutX="91.0" layoutY="190.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.62" prefHeight="44.0" prefWidth="218.0" promptText="Password" style="-fx-background-color: #839192; -fx-cursor: #FDFEFE;">
+            <PasswordField fx:id="passwordField" layoutX="91.0" layoutY="190.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.62" prefHeight="44.0" prefWidth="218.0" promptText="Password" style="-fx-background-color: #839192; -fx-cursor: #FDFEFE; -fx-prompt-text-fill: #FFFFFF; -fx-text-fill: #FFFFFF;">
                <font>
                   <Font name="Leelawadee UI" size="15.0" />
                </font>
@@ -65,11 +70,11 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="797.0" layoutY="586.0" text="64010312 Thanatat">
+      <Label layoutX="789.0" layoutY="586.0" prefHeight="19.0" prefWidth="120.0" text="64010312 Thanatat">
          <font>
          </font>
       </Label>
-      <Label layoutX="797.0" layoutY="603.0" text="64010267 Nichapat">
+      <Label layoutX="796.0" layoutY="601.0" prefHeight="22.0" prefWidth="106.0" text="64010267 Nichapat">
          <font>
             <Font name="Leelawadee UI" size="12.0" />
          </font>
