@@ -2,7 +2,6 @@ package com.demo.covid19;
 
 public class UserHolder {
     private static UserHolder instance;
-
     private int id = 0;
     public static String username;
 
@@ -22,7 +21,8 @@ public class UserHolder {
         return id;
     }
     //add username
-    public void  setUsername(String username){this.username = username;}
-    public  String getUsername(){return username;}
+    public void setUsername(String username){this.username = username;}
+
+    public String getUsername(){return username;}
 
 }

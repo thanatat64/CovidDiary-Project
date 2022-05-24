@@ -15,7 +15,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class LoginController {
+public class LoginController extends GoToScene{
 
     @FXML
     TextField textField;
@@ -58,12 +58,14 @@ public class LoginController {
                 UserHolder.getInstance().setUsername(rs.getString("username"));
                 UserHolder.getInstance().setUserId(rs.getInt("id"));
                 // Go to next scene
+
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("home-view.fxml"));
                 root = loader.load();
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
+
             } else {
                 System.out.println("Password not correct");
             }

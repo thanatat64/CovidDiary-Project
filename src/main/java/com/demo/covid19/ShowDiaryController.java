@@ -12,66 +12,36 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class ShowDiaryController implements Initializable {
+public class ShowDiaryController extends GoToScene implements Initializable {
 
     private Stage stage;
     private Scene scene;
     private Parent root;
+
     @FXML
-    Text usernameText ;
-    public void goToSceneDiary (ActionEvent event) throws IOException {
+    Text usernameText;
 
-        // Go to next scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("diary-view.fxml"));
-        root = loader.load();
-
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
+    @Override
+    public void goToSceneDiary(ActionEvent event) throws IOException {
+        super.goToSceneDiary(event);
     }
 
-    public void goToSceneLogin (ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("login-view.fxml"));
-        root = loader.load();
-
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    @Override
+    public void goToSceneLogin(ActionEvent event) throws IOException, SQLException {
+        super.goToSceneLogin(event);
     }
 
-
-    public void goToSceneHome (ActionEvent event) throws IOException {
-
-        // Go to next scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("home-view.fxml"));
-        root = loader.load();
-
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
+    @Override
+    public void goToSceneHome(ActionEvent event) throws IOException {
+        super.goToSceneHome(event);
     }
 
-    public void goToSceneCovidAlert (ActionEvent event) throws IOException {
-        try {
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("covid-alert-view.fxml"));
-            root = loader.load();
-
-            stage = new Stage();
-            stage.setTitle("COVID ALERT");
-            stage.setScene(new Scene(root));
-            stage.show();
-
-        } catch (Exception e) {
-            System.out.println("Can't load new window");
-        }
+    @Override
+    public void goToSceneCovidAlert(ActionEvent event) throws IOException {
+        super.goToSceneCovidAlert(event);
     }
 
     public void showAllYourDiary (){
