@@ -38,7 +38,7 @@ public class LoginController {
         String password = passwordField.getText();
 
         //check enter to login
-        
+
 
         // Get database connection
         ConnectionDatabase connectionDatabase = new ConnectionDatabase();
@@ -55,6 +55,7 @@ public class LoginController {
 
             // Check password is correct
             if (BCrypt.checkpw(password, hashedPassword)) {
+                UserHolder.getInstance().setUsername(rs.getString("username"));
                 UserHolder.getInstance().setUserId(rs.getInt("id"));
                 // Go to next scene
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("home-view.fxml"));

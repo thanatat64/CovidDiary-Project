@@ -5,7 +5,7 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -24,11 +24,19 @@
                <children>
                   <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="47.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/NFT%20User_128px.png" />
+                        <Image url="@images/NFTUser_128px.png" />
                      </image>
                   </ImageView>
-                  <Text fill="WHITE" layoutX="147.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USEdata_UserNAme" />
+                  <Text fx:id="usernameText" fill="WHITE" layoutX="123.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.0">
+                     <font>
+                        <Font name="Leelawadee UI Bold" size="20.0" />
+                     </font></Text>
                   <Pane layoutX="38.0" layoutY="73.0" prefHeight="15.0" prefWidth="294.0" />
+                  <Label layoutX="124.0" layoutY="15.0" text="Welcome" textFill="WHITE">
+                     <font>
+                        <Font name="Leelawadee UI" size="16.0" />
+                     </font>
+                  </Label>
                </children></Pane>
                 <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#goToSceneHome" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="HOME" textFill="WHITE">
                <padding>
@@ -146,12 +154,12 @@
             <AnchorPane prefHeight="35.0" prefWidth="986.0" />
             <HBox prefHeight="51.0" prefWidth="986.0">
                <children>
-                  <Label text="      COUNTRY     ">
+                  <Label text="     PROVINCE     ">
                      <font>
-                        <Font size="30.0" />
+                        <Font name="Leelawadee UI" size="30.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="choiceBox" prefWidth="332.0" />
+                  <ChoiceBox fx:id="choiceBox" prefHeight="51.0" prefWidth="388.0" />
                </children>
             </HBox>
             <AnchorPane prefHeight="35.0" prefWidth="986.0" />
@@ -162,11 +170,11 @@
                         <Font name="Leelawadee UI" size="30.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="textField" opacity="0.61" prefHeight="329.0" prefWidth="670.0" style="-fx-background-color: #FFA07A; -fx-background-radius: 12;">
+                  <TextArea fx:id="textArea" prefHeight="330.0" prefWidth="664.0" wrapText="true">
                      <font>
-                        <Font name="Leelawadee UI" size="15.0" />
+                        <Font name="Leelawadee UI" size="16.0" />
                      </font>
-                  </TextField>
+                  </TextArea>
                </children>
             </HBox>
             <AnchorPane prefHeight="25.0" prefWidth="986.0" />

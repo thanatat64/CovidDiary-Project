@@ -4,6 +4,7 @@ public class UserHolder {
     private static UserHolder instance;
 
     private int id = 0;
+    public static String username;
 
     public static UserHolder getInstance() {
         if (instance == null) {
@@ -20,5 +21,8 @@ public class UserHolder {
     public int getUserId() {
         return id;
     }
+    //add username
+    public void  setUsername(String username){this.username = username;}
+    public  String getUsername(){return username;}
 
 }

@@ -9,7 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -36,7 +37,9 @@ public class DiaryController implements Initializable{
             , "Yala", "Ranong", "Songkhla", "Satun", "Surat Thani", "Chai Nat"};
 
     @FXML
-    TextField textField;
+    TextArea textArea;
+    @FXML
+    Text usernameText ;
 
     private Stage stage;
     private Scene scene;
@@ -107,6 +110,8 @@ public class DiaryController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         choiceBox.getItems().addAll(country);
+        usernameText.setText(UserHolder.username);
+
     }
 
     // Get database connection
@@ -118,7 +123,7 @@ public class DiaryController implements Initializable{
 
         String myCountry = choiceBox.getValue();
 
-        String myContent = textField.getText();
+        String myContent = textArea.getText();
 
         System.out.println(UserHolder.getInstance().getUserId());
 

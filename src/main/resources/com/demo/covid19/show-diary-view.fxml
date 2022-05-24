@@ -20,13 +20,21 @@
                <children>
                   <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="47.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/NFT%20User_128px.png" />
+                        <Image url="@images/NFTUser_128px.png" />
                      </image>
                   </ImageView>
-                  <Text fill="WHITE" layoutX="147.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USEdata_UserNAme" />
+                  <Text fx:id="usernameText" fill="WHITE" layoutX="123.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="124.0">
+                     <font>
+                        <Font name="Leelawadee UI Bold" size="20.0" />
+                     </font></Text>
                   <Pane layoutX="38.0" layoutY="73.0" prefHeight="15.0" prefWidth="294.0" />
+                  <Label layoutX="124.0" layoutY="15.0" text="Welcome" textFill="WHITE">
+                     <font>
+                        <Font name="Leelawadee UI" size="16.0" />
+                     </font>
+                  </Label>
                </children></Pane>
-                <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="HOME" onAction="#goToSceneHome" textFill="WHITE">
+                <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#goToSceneHome" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="HOME" textFill="WHITE">
                <padding>
                   <Insets left="50.0" />
                </padding>
