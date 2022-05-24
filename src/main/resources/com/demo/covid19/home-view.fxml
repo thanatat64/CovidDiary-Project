@@ -3,10 +3,12 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -133,4 +135,62 @@
          </children>
       </AnchorPane>
    </top>
+   <right>
+      <ScrollBar orientation="VERTICAL" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="329.0" prefWidth="976.0">
+               <children>
+                  <AnchorPane prefHeight="329.0" prefWidth="425.0" style="-fx-background-color: #EAECEE;" />
+                  <VBox prefHeight="329.0" prefWidth="551.0">
+                     <children>
+                        <AnchorPane prefHeight="159.0" prefWidth="551.0" style="-fx-background-color: #ABFFFA;" />
+                        <HBox prefHeight="172.0" prefWidth="551.0">
+                           <children>
+                              <AnchorPane prefHeight="171.0" prefWidth="274.0" style="-fx-background-color: #FFA07A;" />
+                              <AnchorPane prefHeight="171.0" prefWidth="277.0" style="-fx-background-color: #FA8072;" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="346.0" prefWidth="976.0">
+               <children>
+                  <VBox prefHeight="346.0" prefWidth="976.0">
+                     <children>
+                        <AnchorPane prefHeight="29.0" prefWidth="976.0" style="-fx-background-color: #DEDEDE;" />
+                        <AnchorPane prefHeight="163.0" prefWidth="976.0">
+                           <children>
+                              <HBox prefHeight="165.0" prefWidth="975.0">
+                                 <children>
+                                    <Pane prefHeight="165.0" prefWidth="244.0" style="-fx-background-color: #F9A600;" />
+                                    <Pane prefHeight="165.0" prefWidth="244.0" style="-fx-background-color: #F7B531;" />
+                                    <Pane prefHeight="165.0" prefWidth="244.0" style="-fx-background-color: #F7CB72;" />
+                                    <Pane prefHeight="165.0" prefWidth="244.0" style="-fx-background-color: #FDE3B0;" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="155.0" prefWidth="976.0">
+                           <children>
+                              <HBox prefHeight="155.0" prefWidth="977.0">
+                                 <children>
+                                    <Pane prefHeight="155.0" prefWidth="244.0" style="-fx-background-color: #00FC9C;" />
+                                    <Pane prefHeight="155.0" prefWidth="244.0" style="-fx-background-color: #33FDB1;" />
+                                    <Pane prefHeight="155.0" prefWidth="244.0" style="-fx-background-color: #68FFC6;" />
+                                    <Pane prefHeight="155.0" prefWidth="244.0" style="-fx-background-color: #A9FFDF;" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
