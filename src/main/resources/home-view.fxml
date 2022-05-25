@@ -39,7 +39,7 @@
                      </font>
                   </Label>
                </children></Pane>
-            <AnchorPane prefHeight="26.0" prefWidth="294.0" />
+            <JFXButton minHeight="5.0" prefHeight="5.0" prefWidth="23.0" />
             <JFXButton alignment="BASELINE_LEFT" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="     HOME" textFill="WHITE">
                <font>
                   <Font name="Leelawadee UI" size="12.0" />
@@ -167,7 +167,7 @@
                                           <Image url="@images/user-png-33842.png" />
                                        </image>
                                     </ImageView>
-                                    <Text fill="WHITE" layoutX="281.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                    <Text fx:id="countUserText" fill="WHITE" layoutX="281.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0">
                                        <font>
                                           <Font name="Leelawadee UI Bold" size="50.0" />
                                        </font>
@@ -191,7 +191,7 @@
                                                 <Font name="Leelawadee UI" size="18.0" />
                                              </font>
                                           </Label>
-                                          <Text fill="WHITE" layoutX="81.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                          <Text fx:id="countDiaryText" fill="WHITE" layoutX="81.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                              <font>
                                                 <Font name="Leelawadee UI Bold" size="50.0" />
                                              </font>
@@ -251,7 +251,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Text fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                          <Text fx:id="coughText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                              <font>
                                                 <Font name="Leelawadee UI Bold" size="50.0" />
                                              </font>
@@ -273,7 +273,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Text fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                          <Text fx:id="feverText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                              <font>
                                                 <Font name="Leelawadee UI Bold" size="50.0" />
                                              </font>
@@ -292,7 +292,7 @@
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
-                                          <Text fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                          <Text fx:id="soreThroatText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                              <font>
                                                 <Font name="Leelawadee UI Bold" size="50.0" />
                                              </font>
@@ -314,7 +314,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Text fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                          <Text fx:id="tongueText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                              <font>
                                                 <Font name="Leelawadee UI Bold" size="50.0" />
                                              </font>
@@ -344,7 +344,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Text fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                          <Text fx:id="runnyText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                              <font>
                                                 <Font name="Leelawadee UI Bold" size="50.0" />
                                              </font>
@@ -366,7 +366,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Text fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                          <Text fx:id="tiredText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                              <font>
                                                 <Font name="Leelawadee UI Bold" size="50.0" />
                                              </font>
@@ -385,7 +385,7 @@
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
-                                          <Text fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                          <Text fx:id="pantingText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                              <font>
                                                 <Font name="Leelawadee UI Bold" size="50.0" />
                                              </font>
@@ -407,7 +407,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Text fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                          <Text fx:id="noText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                              <font>
                                                 <Font name="Leelawadee UI Bold" size="50.0" />
                                              </font>

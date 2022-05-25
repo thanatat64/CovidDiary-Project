@@ -142,7 +142,7 @@ public class DiaryController extends GoToScene implements Initializable{
 //        ps.executeUpdate();
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("ok-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("ok-view.fxml"));
             root = loader.load();
 
             stage = new Stage();

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="913.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.controller.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="913.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.controller.LoginController">
    <children>
       <ImageView fitHeight="646.0" fitWidth="920.0" layoutX="-3.0">
          <image>
@@ -38,12 +38,12 @@
                   <ColorAdjust />
                </effect>
             </TextField>
-            <PasswordField fx:id="passwordField" layoutX="91.0" layoutY="190.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.62" prefHeight="44.0" prefWidth="218.0" promptText="Password" style="-fx-background-color: #839192; -fx-cursor: #FDFEFE; -fx-prompt-text-fill: #FFFFFF; -fx-text-fill: #FFFFFF;">
+            <PasswordField fx:id="passwordField" layoutX="91.0" layoutY="190.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.62" prefHeight="44.0" prefWidth="218.0" promptText="Password" style="-fx-background-color: #839192; -fx-prompt-text-fill: #FFFFFF; -fx-text-fill: #FFFFFF;">
                <font>
                   <Font name="Leelawadee UI" size="15.0" />
                </font>
             </PasswordField>
-            <JFXButton buttonType="RAISED" layoutX="79.0" layoutY="271.0" onAction="#login" prefHeight="44.0" prefWidth="243.0" style="-fx-background-color: #F08080; -fx-background-radius: 90;" text="Login" fx:id="loginButton">
+            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="79.0" layoutY="271.0" onAction="#login" prefHeight="44.0" prefWidth="243.0" style="-fx-background-color: #F08080; -fx-background-radius: 90;" text="Login">
                <font>
                   <Font name="Leelawadee UI" size="21.0" />
                </font></JFXButton>
