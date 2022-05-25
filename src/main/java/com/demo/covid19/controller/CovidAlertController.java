@@ -36,7 +36,6 @@ public class CovidAlertController {
     @FXML
     private CheckBox noSymptomsBox;
 
-
     private boolean cough;
     private boolean fever;
     private boolean soreThroat;
