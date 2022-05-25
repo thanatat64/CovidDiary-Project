@@ -40,7 +40,7 @@
                   </Label>
                </children></Pane>
             <AnchorPane prefHeight="26.0" prefWidth="294.0" />
-            <JFXButton alignment="BASELINE_LEFT" onAction="#goToSceneHome" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="     HOME" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="     HOME" textFill="WHITE">
                <font>
                   <Font name="Leelawadee UI" size="12.0" />
                </font>

@@ -71,9 +71,35 @@ public class LoginController extends GoToScene {
 
             } else {
                 System.out.println("Password not correct");
+                try {
+
+                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("password-not-correct-view.fxml"));
+                    root = loader.load();
+
+                    stage = new Stage();
+                    stage.setTitle("PASSWORD NOT CORRECT");
+                    stage.setScene(new Scene(root));
+                    stage.show();
+
+                } catch (Exception e) {
+                    System.out.println("Can't load new window");
+                }
             }
         } else {
             System.out.println("User " + username + " not found");
+            try {
+
+                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("username-not-found-view.fxml"));
+                root = loader.load();
+
+                stage = new Stage();
+                stage.setTitle("USERNAME NOT FOUND");
+                stage.setScene(new Scene(root));
+                stage.show();
+
+            } catch (Exception e) {
+                System.out.println("Can't load new window");
+            }
         }
 
     }
