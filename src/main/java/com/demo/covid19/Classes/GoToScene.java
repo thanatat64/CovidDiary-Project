@@ -23,7 +23,7 @@ public class GoToScene {
     public void goToSceneDiary (ActionEvent event) throws IOException {
 
         // Go to next scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("diary-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("diary-view.fxml"));
         root = loader.load();
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -33,7 +33,7 @@ public class GoToScene {
     }
 
     public void goToSceneLogin (ActionEvent event) throws IOException, SQLException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("login-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("login-view.fxml"));
         root = loader.load();
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -43,7 +43,7 @@ public class GoToScene {
     }
 
     public void goToSceneShowDiary (ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("show-diary-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("show-diary-view.fxml"));
         root = loader.load();
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -55,7 +55,7 @@ public class GoToScene {
     public void goToSceneCovidAlert (ActionEvent event) throws IOException {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("covid-alert-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("covid-alert-view.fxml"));
             root = loader.load();
 
             stage = new Stage();
@@ -70,7 +70,7 @@ public class GoToScene {
 
     public void goToSceneHome(ActionEvent event) throws IOException {
         // Go to next scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("home-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("home-view.fxml"));
         root = loader.load();
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -82,7 +82,7 @@ public class GoToScene {
         public void goToSceneEditDiary(ActionEvent event) throws IOException {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("edit-diary-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("edit-diary-view.fxml"));
             root = loader.load();
 
             stage = new Stage();

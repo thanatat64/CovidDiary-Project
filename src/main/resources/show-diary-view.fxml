@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #EAECEE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.demo.covid19.controller.ShowDiaryController">
+    <left>
+        <VBox prefHeight="720.0" prefWidth="294.0" style="-fx-background-color: #273746;" BorderPane.alignment="CENTER">
+            <children>
+            <Pane prefHeight="84.0" prefWidth="166.0">
+               <children>
+                  <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="47.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/NFTUser_128px.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="usernameText" fill="WHITE" layoutX="123.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="124.0">
+                     <font>
+                        <Font name="Leelawadee UI Bold" size="20.0" />
+                     </font></Text>
+                  <Pane layoutX="38.0" layoutY="73.0" prefHeight="15.0" prefWidth="294.0" />
+                  <Label layoutX="124.0" layoutY="15.0" text="Welcome" textFill="WHITE">
+                     <font>
+                        <Font name="Leelawadee UI" size="16.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <AnchorPane prefHeight="26.0" prefWidth="294.0" />
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="50.0" prefWidth="294.0" text="     HOME" textFill="WHITE" onAction="#goToSceneHome">
+               <font>
+                  <Font name="Leelawadee UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="70.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/home_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane prefHeight="15.0" prefWidth="294.0" />
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="50.0" prefWidth="294.0" text="     DIARY" textFill="WHITE" onAction="#goToSceneDiary">
+               <padding>
+                  <Insets left="70.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/book_and_pencil_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane prefHeight="15.0" prefWidth="294.0" />
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="50.0" prefWidth="294.0" text="     SHOW DIARY" textFill="WHITE">
+               <font>
+                  <Font name="Leelawadee UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets left="70.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/copybook_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <AnchorPane prefHeight="351.0" prefWidth="294.0" />
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="50.0" prefWidth="294.0" text="     COVID ALERT" textFill="#fc0000" onAction="#goToSceneCovidAlert">
+               <padding>
+                  <Insets left="70.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/siren_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane prefHeight="15.0" prefWidth="294.0" />
+            <JFXButton alignment="BASELINE_LEFT" prefHeight="50.0" prefWidth="294.0" text="     LOG OUT" textFill="WHITE" onAction="#goToSceneLogin">
+               <padding>
+                  <Insets left="70.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Logout_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane prefHeight="15.0" prefWidth="294.0" />
+            </children>
+        </VBox>
+    </left>
+   <top>
+      <AnchorPane prefHeight="42.0" prefWidth="1280.0" style="-fx-background-color: #2c3e50;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="5.0" prefHeight="32.0" prefWidth="135.0" text="Show Diary" textFill="#f2f2f2">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="143.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/copybook_30px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="17.0" prefWidth="986.0" />
+            <AnchorPane prefHeight="37.0" prefWidth="986.0">
+               <children>
+                  <TextField layoutX="291.0" layoutY="12.0" prefHeight="25.0" prefWidth="441.0" promptText="Keyword...." />
+                  <ImageView fitHeight="24.0" fitWidth="27.0" layoutX="256.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/scarch2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="25.0" prefWidth="986.0" />
+            <HBox prefHeight="479.0" prefWidth="986.0">
+               <children>
+                  <AnchorPane prefHeight="527.0" prefWidth="176.0" />
+                  <AnchorPane prefHeight="482.0" prefWidth="657.0">
+                     <children>
+                        <TableView prefHeight="527.0" prefWidth="736.0">
+                          <columns>
+                            <TableColumn prefWidth="228.0" text="Date" />
+                              <TableColumn prefWidth="204.0" text="Provinced" />
+                              <TableColumn prefWidth="303.0" text="Diary-Text" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="527.0" prefWidth="176.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Pane prefHeight="20.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

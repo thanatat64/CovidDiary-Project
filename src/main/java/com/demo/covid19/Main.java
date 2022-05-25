@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("login-view.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login-view.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             //mouse event
