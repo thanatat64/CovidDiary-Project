@@ -1,4 +1,4 @@
-package com.demo.covid19.Classes;
+package com.demo.covid19.classes;
 
 public class UserHolder {
     private static UserHolder instance;

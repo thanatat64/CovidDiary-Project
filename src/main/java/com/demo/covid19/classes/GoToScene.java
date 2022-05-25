@@ -1,4 +1,4 @@
-package com.demo.covid19.Classes;
+package com.demo.covid19.classes;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

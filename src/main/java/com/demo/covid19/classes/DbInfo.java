@@ -1,6 +1,6 @@
-package com.demo.covid19.Classes;
+package com.demo.covid19.classes;
 
-import com.demo.covid19.Connection.ConnectionDatabase;
+import com.demo.covid19.connection.ConnectionDatabase;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

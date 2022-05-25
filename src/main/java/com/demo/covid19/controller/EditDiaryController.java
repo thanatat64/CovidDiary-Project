@@ -1,7 +1,7 @@
 package com.demo.covid19.controller;
 
-import com.demo.covid19.Classes.UserHolder;
-import com.demo.covid19.Connection.ConnectionDatabase;
+import com.demo.covid19.classes.UserHolder;
+import com.demo.covid19.connection.ConnectionDatabase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,7 +29,7 @@ public class EditDiaryController implements Initializable {
     @FXML
     ChoiceBox<String> choiceBox;
 
-    private String[] country = {"Kamphaeng Phet", "Chiang Rai", "Chiang Mai", "Tak", "Nakhon Sawan", "Nan", "Phichit", "Phitsanulok", "Phetchabun", "Phrae"
+    private String[] province = {"Kamphaeng Phet", "Chiang Rai", "Chiang Mai", "Tak", "Nakhon Sawan", "Nan", "Phichit", "Phitsanulok", "Phetchabun", "Phrae"
             , "Mae Hong Son", "Lampang", "Lamphun", "Sukhothai", "Uttaradit", "Uthai Thani", "Phayao", "Bangkok", "Kanchanaburi", "Chanthaburi"
             , "Chachoengsao", "Chon Buri", "Trat", "Nakhon Nayok", "Nakhon Pathom", "Nonthaburi", "Pathum Thani", "Prachuap Khiri Khan", "Prachin Buri", "Phra Nakhon Si Ayutthaya"
             , "Phetchaburi", "Rayong", "Ratchaburi", "Lop Buri", "Samut Prakan", "Samut Songkhram", "Samut Sakhon", "Saraburi", "Sing Buri", "Suphan Buri"
@@ -70,7 +70,7 @@ public class EditDiaryController implements Initializable {
         if (rs.next()) {
             int diaryId = rs.getInt("id");
 
-            String updateDiarySQL = "update user_diaries set country = ?, content = ? where id = ?";
+            String updateDiarySQL = "update user_diaries set province = ?, content = ? where id = ?";
             PreparedStatement ps2 = connectionDatabase.getConn().prepareStatement(updateDiarySQL);
 
             ps2.setString(1, myProvince);
@@ -79,7 +79,7 @@ public class EditDiaryController implements Initializable {
             ps2.executeUpdate();
 
         } else {
-            String insertAll = "INSERT INTO user_diaries (user_id, date, country, content) VALUES (?, ?, ?, ?)";
+            String insertAll = "INSERT INTO user_diaries (user_id, date, province, content) VALUES (?, ?, ?, ?)";
             PreparedStatement ps3 = connectionDatabase.getConn().prepareStatement(insertAll);
 
             //save date, country, content to database
@@ -99,6 +99,6 @@ public class EditDiaryController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        choiceBox.getItems().addAll(country);
+        choiceBox.getItems().addAll(province);
     }
 }

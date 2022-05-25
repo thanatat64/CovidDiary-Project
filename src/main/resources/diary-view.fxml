@@ -124,14 +124,14 @@
       </AnchorPane>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #eae9e9;" BorderPane.alignment="CENTER">
          <children>
             <Pane prefHeight="62.0" prefWidth="986.0" />
             <HBox prefHeight="40.0" prefWidth="986.0">
                <children>
-                  <Label text="      DATE            ">
+                  <Label prefHeight="45.0" prefWidth="221.0" text="           DATE              ">
                      <font>
-                        <Font name="Leelawadee UI" size="30.0" />
+                        <Font name="Leelawadee UI" size="18.0" />
                      </font>
                   </Label>
                   <DatePicker fx:id="datePicker" prefHeight="45.0" prefWidth="390.0" />
@@ -140,23 +140,23 @@
             <AnchorPane prefHeight="35.0" prefWidth="986.0" />
             <HBox prefHeight="51.0" prefWidth="986.0">
                <children>
-                  <Label text="     PROVINCE     ">
+                  <Label layoutX="5.0" prefHeight="47.0" prefWidth="224.0" text="           PROVINCE      ">
                      <font>
-                        <Font name="Leelawadee UI" size="30.0" />
+                        <Font name="Leelawadee UI" size="18.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="choiceBox" prefHeight="51.0" prefWidth="388.0" />
+                  <ChoiceBox fx:id="choiceBox" prefHeight="41.0" prefWidth="388.0" />
                </children>
             </HBox>
             <AnchorPane prefHeight="35.0" prefWidth="986.0" />
             <HBox prefHeight="330.0" prefWidth="986.0">
                <children>
-                  <Label prefHeight="45.0" prefWidth="222.0" text="      CONTENT   ">
+                  <Label prefHeight="45.0" prefWidth="222.0" text="           CONTENT   ">
                      <font>
-                        <Font name="Leelawadee UI" size="30.0" />
+                        <Font name="Leelawadee UI" size="18.0" />
                      </font>
                   </Label>
-                  <TextArea fx:id="textArea" prefHeight="330.0" prefWidth="664.0" wrapText="true">
+                  <TextArea fx:id="textArea" prefHeight="330.0" prefWidth="685.0" wrapText="true">
                      <font>
                         <Font name="Leelawadee UI" size="16.0" />
                      </font>

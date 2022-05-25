@@ -1,8 +1,8 @@
 package com.demo.covid19.controller;
 
-import com.demo.covid19.Classes.GoToScene;
-import com.demo.covid19.Classes.UserHolder;
-import com.demo.covid19.Connection.ConnectionDatabase;
+import com.demo.covid19.classes.GoToScene;
+import com.demo.covid19.classes.UserHolder;
+import com.demo.covid19.connection.ConnectionDatabase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,7 +29,7 @@ public class DiaryController extends GoToScene implements Initializable{
     @FXML
     ChoiceBox<String> choiceBox;
 
-    private String[] country = {"Kamphaeng Phet", "Chiang Rai", "Chiang Mai", "Tak", "Nakhon Sawan", "Nan", "Phichit", "Phitsanulok", "Phetchabun", "Phrae"
+    private String[] province = {"Kamphaeng Phet", "Chiang Rai", "Chiang Mai", "Tak", "Nakhon Sawan", "Nan", "Phichit", "Phitsanulok", "Phetchabun", "Phrae"
             , "Mae Hong Son", "Lampang", "Lamphun", "Sukhothai", "Uttaradit", "Uthai Thani", "Phayao", "Bangkok", "Kanchanaburi", "Chanthaburi"
             , "Chachoengsao", "Chon Buri", "Trat", "Nakhon Nayok", "Nakhon Pathom", "Nonthaburi", "Pathum Thani", "Prachuap Khiri Khan", "Prachin Buri", "Phra Nakhon Si Ayutthaya"
             , "Phetchaburi", "Rayong", "Ratchaburi", "Lop Buri", "Samut Prakan", "Samut Songkhram", "Samut Sakhon", "Saraburi", "Sing Buri", "Suphan Buri"
@@ -76,9 +76,8 @@ public class DiaryController extends GoToScene implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        choiceBox.getItems().addAll(country);
+        choiceBox.getItems().addAll(province);
         usernameText.setText(UserHolder.username);
-
     }
 
     // Get database connection
@@ -88,7 +87,7 @@ public class DiaryController extends GoToScene implements Initializable{
 
         LocalDate date = datePicker.getValue();
 
-        String myCountry = choiceBox.getValue();
+        String myProvince = choiceBox.getValue();
 
         String myContent = textArea.getText();
 
@@ -106,40 +105,17 @@ public class DiaryController extends GoToScene implements Initializable{
         if (rs.next()) {
 
         } else {
-            String insertAll = "INSERT INTO user_diaries (user_id, date, country, content) VALUES (?, ?, ?, ?)";
+            String insertAll = "INSERT INTO user_diaries (user_id, date, province, content) VALUES (?, ?, ?, ?)";
             PreparedStatement ps3 = connectionDatabase.getConn().prepareStatement(insertAll);
 
             //save date, country, content to database
 
             ps3.setInt(1, userID);
             ps3.setDate(2, Date.valueOf(date));
-            ps3.setString(3, myCountry);
+            ps3.setString(3, myProvince);
             ps3.setString(4, myContent);
             ps3.executeUpdate();
         }
-
-//        LocalDate date = datePicker.getValue();
-//
-//        String myCountry = choiceBox.getValue();
-//
-//        String myContent = textField.getText();
-//
-//
-//        System.out.println(UserHolder.getInstance().getUserId());
-//
-//        int userID = UserHolder.getInstance().getUserId();
-//        Statement stmt = connectionDatabase.getConn().createStatement();
-//
-//        String sql = "INSERT INTO user_diaries (user_id, date, country, content) VALUES (?, ?, ?, ?)";
-//        PreparedStatement ps = connectionDatabase.getConn().prepareStatement(sql);
-//
-//        //save date, country, content to database
-//
-//        ps.setInt(1, userID);
-//        ps.setDate(2, Date.valueOf(date));
-//        ps.setString(3, myCountry);
-//        ps.setString(4, myContent);
-//        ps.executeUpdate();
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("ok-view.fxml"));
@@ -155,32 +131,4 @@ public class DiaryController extends GoToScene implements Initializable{
 
     }
 
-//
-//    public void insert() throws Exception {
-//        ConnectionDatabase connectionDatabase = new ConnectionDatabase();
-//        String sql = "INSERT INTO users (username, created_date) VALUE (?, ?)";
-//        PreparedStatement statement  = connectionDatabase.getConn().prepareStatement(sql);
-//        statement.setString(1, userna);
-//
-//    }
-
-//    public void getData(ActionEvent event) {
-//
-//        String myCountry = choiceBox.getValue();
-//        LocalDate myDate = datePicker.getValue();
-//        String myTextField = textField.getText();
-//
-//    }
-
-//    public void insert() throws Exception {
-//        Connection conn = null;
-//        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "P@ssw0rd");
-//        String sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-//        PreparedStatement statement = conn.prepareStatement(sql);
-//        statement.setString(1, "Nichapat");
-//        statement.setString(2, "password");
-//        statement.execute();
-//    }
 }
-
-// INSERT INTO user_diaries (user_id, date, country, content) VALUES (?, ?, ?, ?);

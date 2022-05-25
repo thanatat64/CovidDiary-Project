@@ -7,10 +7,10 @@ module com.demo.covid {
 
     opens com.demo.covid19 to javafx.fxml;
     exports com.demo.covid19;
-    exports com.demo.covid19.Classes;
-    opens com.demo.covid19.Classes to javafx.fxml;
-    exports com.demo.covid19.Connection;
-    opens com.demo.covid19.Connection to javafx.fxml;
+    exports com.demo.covid19.classes;
+    opens com.demo.covid19.classes to javafx.fxml;
+    exports com.demo.covid19.connection;
+    opens com.demo.covid19.connection to javafx.fxml;
     exports com.demo.covid19.controller;
     opens com.demo.covid19.controller to javafx.fxml;
 

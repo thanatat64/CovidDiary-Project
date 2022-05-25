@@ -2,9 +2,12 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -149,7 +152,17 @@
                <children>
                   <AnchorPane prefHeight="329.0" prefWidth="425.0">
                      <children>
-                        <PieChart layoutX="49.0" layoutY="19.0" prefHeight="292.0" prefWidth="328.0" title="Pie chart" />
+                        <BarChart fx:id="barChart" layoutX="11.0" layoutY="29.0" prefHeight="289.0" prefWidth="404.0" title="Symptoms Chart">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" tickLabelGap="2.0" upperBound="15.0" />
+                          </yAxis>
+                           <effect>
+                              <ColorAdjust />
+                           </effect>
+                        </BarChart>
                      </children></AnchorPane>
                   <VBox prefHeight="329.0" prefWidth="551.0">
                      <children>

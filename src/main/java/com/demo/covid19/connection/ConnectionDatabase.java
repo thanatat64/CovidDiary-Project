@@ -1,4 +1,4 @@
-package com.demo.covid19.Connection;
+package com.demo.covid19.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

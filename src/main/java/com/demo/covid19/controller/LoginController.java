@@ -1,8 +1,8 @@
 package com.demo.covid19.controller;
 
-import com.demo.covid19.Classes.GoToScene;
-import com.demo.covid19.Classes.UserHolder;
-import com.demo.covid19.Connection.ConnectionDatabase;
+import com.demo.covid19.classes.GoToScene;
+import com.demo.covid19.classes.UserHolder;
+import com.demo.covid19.connection.ConnectionDatabase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
