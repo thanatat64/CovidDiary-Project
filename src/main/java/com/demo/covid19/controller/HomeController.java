@@ -26,8 +26,10 @@ public class HomeController extends GoToScene implements Initializable{
 
     //test
 
+    ConnectionDatabase connectionDatabase = new ConnectionDatabase();
+
     @Override
-    public void goToSceneDiary(ActionEvent event) throws IOException {
+    public void goToSceneDiary(ActionEvent event) throws IOException, Exception {
         super.goToSceneDiary(event);
     }
 
@@ -81,6 +83,31 @@ public class HomeController extends GoToScene implements Initializable{
         int countPanting = queryCount(sqlPanting,connectionDatabase);
         int countNo = queryCount(sqlNo,connectionDatabase);
 
+    }
+
+    public int countOfUsers() throws Exception {
+        ConnectionDatabase connectionDatabase = new ConnectionDatabase();
+        String countUsersSQL = "select count(1) as total from users";
+        PreparedStatement ps = connectionDatabase.getConn().prepareStatement(countUsersSQL);
+        ResultSet rs = ps.executeQuery();
+
+        if(rs.next()) {
+            int total = rs.getInt(1);
+            return total;
+        }
+        return 0;
+    }
+
+    public int countOfDiaries() throws Exception {
+        String countOfDiariesSQL = "select count(1) as total from user_diaries";
+        PreparedStatement ps = connectionDatabase.getConn().prepareStatement(countOfDiariesSQL);
+        ResultSet rs = ps.executeQuery();
+
+        if(rs.next()) {
+            int total = rs.getInt(1);
+            return total;
+        }
+        return 0;
     }
 
     @Override

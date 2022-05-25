@@ -20,7 +20,7 @@ public class GoToScene {
 
     }
 
-    public void goToSceneDiary (ActionEvent event) throws IOException {
+    public void goToSceneDiary (ActionEvent event) throws IOException, Exception {
 
         // Go to next scene
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("diary-view.fxml"));

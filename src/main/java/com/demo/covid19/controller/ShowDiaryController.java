@@ -25,7 +25,7 @@ public class ShowDiaryController extends GoToScene implements Initializable {
     Text usernameText;
 
     @Override
-    public void goToSceneDiary(ActionEvent event) throws IOException {
+    public void goToSceneDiary(ActionEvent event) throws IOException, Exception {
         super.goToSceneDiary(event);
     }
 
