@@ -16,6 +16,7 @@ public class BCryptPlayground {
             System.out.println("not");
         }
 
+
 //      $2a$10$csc58VtsqRM2unFoCwLvOuY3JEQfxvEqRcSpR3FRIxhZzqDMBQvLK 123456
 
     }

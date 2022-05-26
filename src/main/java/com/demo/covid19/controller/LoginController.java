@@ -29,6 +29,7 @@ public class LoginController extends GoToScene {
     @FXML
     Button loginButton;
 
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -39,9 +40,6 @@ public class LoginController extends GoToScene {
         // Get data from forms
         String username = textField.getText();
         String password = passwordField.getText();
-
-        //check enter to login
-
 
         // Get database connection
         ConnectionDatabase connectionDatabase = new ConnectionDatabase();

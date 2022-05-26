@@ -1,5 +1,6 @@
 package com.demo.covid19.classes;
 
+import com.demo.covid19.controller.RegisterController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -34,6 +35,17 @@ public class GoToScene {
     public void goToSceneLogin (ActionEvent event) throws IOException, SQLException {
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("login-view.fxml"));
         root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void goToSceneRegister (ActionEvent event) throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("register-view.fxml"));
+        root = loader.load();
+        RegisterController r = loader.getController();
+        r.init();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
