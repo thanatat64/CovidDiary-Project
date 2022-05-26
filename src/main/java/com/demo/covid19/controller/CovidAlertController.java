@@ -132,6 +132,7 @@ public class CovidAlertController {
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();
 
+
     }
 
 

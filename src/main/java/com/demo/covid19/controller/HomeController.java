@@ -1,6 +1,6 @@
 package com.demo.covid19.controller;
 
-import com.demo.covid19.classes.DbInfo;
+import com.demo.covid19.classes.DatabaseInformation;
 import com.demo.covid19.classes.GoToScene;
 import com.demo.covid19.classes.UserHolder;
 import com.demo.covid19.connection.ConnectionDatabase;
@@ -22,7 +22,7 @@ public class HomeController extends GoToScene {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    DbInfo info = new DbInfo();
+    DatabaseInformation info = new DatabaseInformation();
 
     @FXML
     Text usernameText;

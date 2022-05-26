@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DbInfo {
+public class DatabaseInformation {
     public ConnectionDatabase connectionDatabase = new ConnectionDatabase();
     private int countCough;
     private int countFever;
@@ -17,7 +17,7 @@ public class DbInfo {
     private int countPanting;
     private int countNo;
 
-    public DbInfo() throws SQLException {
+    public DatabaseInformation() throws SQLException {
         showAllAdvertise();
     }
 
