@@ -95,5 +95,22 @@ public class GoToScene {
         }
     }
 
+    //ควรไปพบแพทย์
+
+    public void goToSceneTakeCare (ActionEvent event) throws IOException {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("take-care-view.fxml"));
+            root = loader.load();
+
+            stage = new Stage();
+            stage.setTitle("HOSPITAL ALERT");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (Exception e) {
+            System.out.println("Can't load new window");
+        }
+    }
 
 }

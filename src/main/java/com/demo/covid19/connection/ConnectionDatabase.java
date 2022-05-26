@@ -12,8 +12,8 @@ public class ConnectionDatabase {
 
     public Connection getConn() throws SQLException {
 
-        //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "P@ssw0rd");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://161.246.5.40:3777/myCovid", "root", "VwmCRG2nuWhGp9aA");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "P@ssw0rd");
+//        Connection conn = DriverManager.getConnection("jdbc:mysql://161.246.5.40:3777/myCovid", "root", "VwmCRG2nuWhGp9aA");
 
         return conn;
     }

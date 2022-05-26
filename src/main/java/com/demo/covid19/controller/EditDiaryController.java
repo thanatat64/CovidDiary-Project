@@ -72,7 +72,6 @@ public class EditDiaryController implements Initializable {
 
             String updateDiarySQL = "update user_diaries set province = ?, content = ? where id = ?";
             PreparedStatement ps2 = connectionDatabase.getConn().prepareStatement(updateDiarySQL);
-
             ps2.setString(1, myProvince);
             ps2.setString(2, myContent);
             ps2.setInt(3, diaryId);

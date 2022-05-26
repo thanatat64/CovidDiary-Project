@@ -1,5 +1,6 @@
 package com.demo.covid19.controller;
 
+import com.demo.covid19.classes.GoToScene;
 import com.demo.covid19.classes.UserHolder;
 import com.demo.covid19.connection.ConnectionDatabase;
 import javafx.event.ActionEvent;
@@ -10,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.sql.*;
 
-public class CovidAlertController {
+public class CovidAlertController extends GoToScene {
 
     @FXML
     private CheckBox coughBox;
@@ -132,6 +133,7 @@ public class CovidAlertController {
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();
 
+        goToSceneTakeCare(event);
 
     }
 
