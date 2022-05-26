@@ -25,7 +25,6 @@ public class GoToScene {
         // Go to next scene
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("diary-view.fxml"));
         root = loader.load();
-
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -35,7 +34,6 @@ public class GoToScene {
     public void goToSceneLogin (ActionEvent event) throws IOException, SQLException {
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("login-view.fxml"));
         root = loader.load();
-
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -45,7 +43,6 @@ public class GoToScene {
     public void goToSceneShowDiary (ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("show-diary-view.fxml"));
         root = loader.load();
-
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -59,7 +56,7 @@ public class GoToScene {
             root = loader.load();
 
             stage = new Stage();
-            stage.setTitle("COVID ALERT");
+            stage.setTitle("Covid Diary - Symptoms Check");
             stage.setScene(new Scene(root));
             stage.show();
 
@@ -86,7 +83,7 @@ public class GoToScene {
             root = loader.load();
 
             stage = new Stage();
-            stage.setTitle("EDIT DIARY");
+            stage.setTitle("Covid Diary - Edit Diary ");
             stage.setScene(new Scene(root));
             stage.show();
 
@@ -104,7 +101,7 @@ public class GoToScene {
             root = loader.load();
 
             stage = new Stage();
-            stage.setTitle("HOSPITAL ALERT");
+            stage.setTitle("Covid Diary - Advice");
             stage.setScene(new Scene(root));
             stage.show();
 

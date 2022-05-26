@@ -66,6 +66,7 @@ public class LoginController extends GoToScene {
                 root = loader.load();
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
+                stage.setTitle("Covid Diary");
                 stage.setScene(scene);
                 stage.show();
 
@@ -77,7 +78,7 @@ public class LoginController extends GoToScene {
                     root = loader.load();
 
                     stage = new Stage();
-                    stage.setTitle("PASSWORD NOT CORRECT");
+                    stage.setTitle("Covid Diary");
                     stage.setScene(new Scene(root));
                     stage.show();
 
@@ -93,7 +94,7 @@ public class LoginController extends GoToScene {
                 root = loader.load();
 
                 stage = new Stage();
-                stage.setTitle("USERNAME NOT FOUND");
+                stage.setTitle("Covid Diary");
                 stage.setScene(new Scene(root));
                 stage.show();
 

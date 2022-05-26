@@ -91,11 +91,11 @@
                </padding>
             </JFXButton>
             <AnchorPane prefHeight="351.0" prefWidth="294.0" />
-            <JFXButton alignment="BASELINE_LEFT" onAction="#goToSceneCovidAlert" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="     COVID ALERT" textFill="RED">
+            <JFXButton alignment="BASELINE_LEFT" onAction="#goToSceneCovidAlert" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="     SYMPTOMS CHECK" textFill="RED">
                <graphic>
-                  <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="29.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/siren_48px.png" />
+                        <Image url="@images/checklisttwo.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -107,7 +107,7 @@
                </padding>
             </JFXButton>
             <Pane prefHeight="15.0" prefWidth="294.0" />
-            <JFXButton alignment="BASELINE_LEFT" onAction="#goToSceneLogin" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="     LOG  OUT" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" onAction="#goToSceneLogin" prefHeight="50.0" prefWidth="294.0" style="-fx-background-color: #273746;" text="     LOG OUT" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -216,13 +216,23 @@
                                  <children>
                                     <Pane layoutX="19.0" layoutY="13.0" prefHeight="145.0" prefWidth="240.0" style="-fx-background-color: #FA8072; -fx-background-radius: 10;">
                                        <children>
-                                          <ImageView fitHeight="80.0" fitWidth="63.0" layoutX="89.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="64.0" fitWidth="71.0" layoutX="156.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@images/syringe.png" />
+                                                <Image url="@images/alert.png" />
                                              </image>
                                           </ImageView>
+                                          <Label layoutX="26.0" layoutY="110.0" text="covid risk taker" textFill="#971d1d">
+                                             <font>
+                                                <Font name="Leelawadee UI Bold" size="18.0" />
+                                             </font>
+                                          </Label>
                                        </children>
                                     </Pane>
+                                    <Text fx:id="countRiskTakerText" fill="#e43838" layoutX="91.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                       <font>
+                                          <Font name="Leelawadee UI Bold" size="50.0" />
+                                       </font>
+                                    </Text>
                                  </children></AnchorPane>
                            </children>
                         </HBox>
@@ -262,13 +272,13 @@
                                                       <Font size="20.0" />
                                                    </font>
                                                 </Label>
+                                                <Text fx:id="coughText" fill="WHITE" layoutX="125.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                                   <font>
+                                                      <Font name="Leelawadee UI Bold" size="50.0" />
+                                                   </font>
+                                                </Text>
                                              </children>
                                           </Pane>
-                                          <Text fx:id="coughText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-                                             <font>
-                                                <Font name="Leelawadee UI Bold" size="50.0" />
-                                             </font>
-                                          </Text>
                                        </children></Pane>
                                     <Pane prefHeight="165.0" prefWidth="244.0">
                                        <children>
@@ -284,17 +294,24 @@
                                                       <Font size="20.0" />
                                                    </font>
                                                 </Label>
+                                                <Text fx:id="feverText" fill="WHITE" layoutX="125.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                                   <font>
+                                                      <Font name="Leelawadee UI Bold" size="50.0" />
+                                                   </font>
+                                                </Text>
                                              </children>
                                           </Pane>
-                                          <Text fx:id="feverText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-                                             <font>
-                                                <Font name="Leelawadee UI Bold" size="50.0" />
-                                             </font>
-                                          </Text>
                                        </children></Pane>
                                     <Pane prefHeight="165.0" prefWidth="244.0">
                                        <children>
-                                          <Pane layoutX="12.0" layoutY="15.0" prefHeight="135.0" prefWidth="220.0" style="-fx-background-color: #F7CB72; -fx-background-radius: 10;" />
+                                          <Pane layoutX="12.0" layoutY="15.0" prefHeight="135.0" prefWidth="220.0" style="-fx-background-color: #F7CB72; -fx-background-radius: 10;">
+                                             <children>
+                                                <Text fx:id="soreThroatText" fill="WHITE" layoutX="110.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                                   <font>
+                                                      <Font name="Leelawadee UI Bold" size="50.0" />
+                                                   </font>
+                                                </Text>
+                                             </children></Pane>
                                           <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="24.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@images/throat.png" />
@@ -305,11 +322,6 @@
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
-                                          <Text fx:id="soreThroatText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-                                             <font>
-                                                <Font name="Leelawadee UI Bold" size="50.0" />
-                                             </font>
-                                          </Text>
                                        </children></Pane>
                                     <Pane prefHeight="165.0" prefWidth="244.0">
                                        <children>
@@ -325,13 +337,13 @@
                                                       <Font size="20.0" />
                                                    </font>
                                                 </Label>
+                                                <Text fx:id="tongueText" fill="WHITE" layoutX="105.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                                   <font>
+                                                      <Font name="Leelawadee UI Bold" size="50.0" />
+                                                   </font>
+                                                </Text>
                                              </children>
                                           </Pane>
-                                          <Text fx:id="tongueText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-                                             <font>
-                                                <Font name="Leelawadee UI Bold" size="50.0" />
-                                             </font>
-                                          </Text>
                                        </children></Pane>
                                  </children>
                               </HBox>
@@ -355,13 +367,13 @@
                                                       <Font size="20.0" />
                                                    </font>
                                                 </Label>
+                                                <Text fx:id="runnyText" fill="WHITE" layoutX="125.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                                   <font>
+                                                      <Font name="Leelawadee UI Bold" size="50.0" />
+                                                   </font>
+                                                </Text>
                                              </children>
                                           </Pane>
-                                          <Text fx:id="runnyText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-                                             <font>
-                                                <Font name="Leelawadee UI Bold" size="50.0" />
-                                             </font>
-                                          </Text>
                                        </children></Pane>
                                     <Pane prefHeight="155.0" prefWidth="244.0">
                                        <children>
@@ -377,17 +389,24 @@
                                                       <Font size="20.0" />
                                                    </font>
                                                 </Label>
+                                                <Text fx:id="tiredText" fill="WHITE" layoutX="121.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                                   <font>
+                                                      <Font name="Leelawadee UI Bold" size="50.0" />
+                                                   </font>
+                                                </Text>
                                              </children>
                                           </Pane>
-                                          <Text fx:id="tiredText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-                                             <font>
-                                                <Font name="Leelawadee UI Bold" size="50.0" />
-                                             </font>
-                                          </Text>
                                        </children></Pane>
                                     <Pane prefHeight="155.0" prefWidth="244.0">
                                        <children>
-                                          <Pane layoutX="12.0" layoutY="10.0" prefHeight="135.0" prefWidth="220.0" style="-fx-background-color: #68FFC6; -fx-background-radius: 10;" />
+                                          <Pane layoutX="12.0" layoutY="10.0" prefHeight="135.0" prefWidth="220.0" style="-fx-background-color: #68FFC6; -fx-background-radius: 10;">
+                                             <children>
+                                                <Text fx:id="pantingText" fill="WHITE" layoutX="108.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                                   <font>
+                                                      <Font name="Leelawadee UI Bold" size="50.0" />
+                                                   </font>
+                                                </Text>
+                                             </children></Pane>
                                           <ImageView fitHeight="67.0" fitWidth="67.0" layoutX="20.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@images/gasp.png" />
@@ -398,11 +417,6 @@
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
-                                          <Text fx:id="pantingText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-                                             <font>
-                                                <Font name="Leelawadee UI Bold" size="50.0" />
-                                             </font>
-                                          </Text>
                                        </children></Pane>
                                     <Pane prefHeight="155.0" prefWidth="244.0">
                                        <children>
@@ -418,13 +432,13 @@
                                                       <Font size="20.0" />
                                                    </font>
                                                 </Label>
+                                                <Text fx:id="noText" fill="WHITE" layoutX="110.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                                   <font>
+                                                      <Font name="Leelawadee UI Bold" size="50.0" />
+                                                   </font>
+                                                </Text>
                                              </children>
                                           </Pane>
-                                          <Text fx:id="noText" fill="WHITE" layoutX="174.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-                                             <font>
-                                                <Font name="Leelawadee UI Bold" size="50.0" />
-                                             </font>
-                                          </Text>
                                        </children></Pane>
                                  </children>
                               </HBox>

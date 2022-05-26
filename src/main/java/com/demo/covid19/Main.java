@@ -14,6 +14,7 @@ public class Main extends Application {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login-view.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            stage.setTitle("Covid Diary");
             //mouse event
             root.setOnMousePressed(event -> {
                 x = event.getSceneX();

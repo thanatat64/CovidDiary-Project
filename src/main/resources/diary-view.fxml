@@ -78,14 +78,14 @@
                </graphic>
             </JFXButton>
             <AnchorPane prefHeight="351.0" prefWidth="294.0" />
-            <JFXButton alignment="BASELINE_LEFT" onAction="#goToSceneCovidAlert" prefHeight="50.0" prefWidth="294.0" text="     COVID ALERT" textFill="#fc0000">
+            <JFXButton alignment="BASELINE_LEFT" onAction="#goToSceneCovidAlert" prefHeight="50.0" prefWidth="294.0" text="     SYMPTOMS CHECK" textFill="#fc0000">
                <padding>
                   <Insets left="70.0" />
                </padding>
                <graphic>
                   <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/siren_48px.png" />
+                        <Image url="@images/checklisttwo.png" />
                      </image>
                   </ImageView>
                </graphic>

@@ -84,14 +84,14 @@
                </graphic>
             </JFXButton>
             <AnchorPane prefHeight="351.0" prefWidth="294.0" />
-            <JFXButton alignment="BASELINE_LEFT" onAction="#goToSceneCovidAlert" prefHeight="50.0" prefWidth="294.0" text="     COVID ALERT" textFill="#fc0000">
+            <JFXButton alignment="BASELINE_LEFT" onAction="#goToSceneCovidAlert" prefHeight="50.0" prefWidth="294.0" text="     SYMPTOMS CHECK" textFill="#fc0000">
                <padding>
                   <Insets left="70.0" />
                </padding>
                <graphic>
                   <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/siren_48px.png" />
+                        <Image url="@images/checklisttwo.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -135,7 +135,7 @@
             <AnchorPane prefHeight="17.0" prefWidth="986.0" />
             <AnchorPane prefHeight="37.0" prefWidth="986.0">
                <children>
-                  <TextField layoutX="291.0" layoutY="12.0" prefHeight="25.0" prefWidth="441.0" promptText="Keyword...." fx:id="keywordTextField"/>
+                  <TextField fx:id="keywordTextField" layoutX="291.0" layoutY="12.0" prefHeight="25.0" prefWidth="441.0" promptText="Keyword...." />
                   <ImageView fitHeight="24.0" fitWidth="27.0" layoutX="256.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/scarch2.png" />
@@ -149,11 +149,11 @@
                   <AnchorPane prefHeight="527.0" prefWidth="176.0" />
                   <AnchorPane prefHeight="482.0" prefWidth="657.0">
                      <children>
-                        <TableView prefHeight="527.0" prefWidth="736.0" fx:id="diarySearchTableView">
+                        <TableView fx:id="diarySearchTableView" prefHeight="527.0" prefWidth="736.0">
                           <columns>
-                            <TableColumn prefWidth="228.0" text="Date" fx:id="diarySearchDateTableColumn" />
-                              <TableColumn prefWidth="204.0" text="Provinced" fx:id="diarySearchProvinceTableColumn" />
-                              <TableColumn prefWidth="303.0" text="Diary-Text" fx:id="diarySearchContentTableColumn" />
+                            <TableColumn fx:id="diarySearchDateTableColumn" prefWidth="228.0" text="Date" />
+                              <TableColumn fx:id="diarySearchProvinceTableColumn" prefWidth="204.0" text="Provinced" />
+                              <TableColumn fx:id="diarySearchContentTableColumn" prefWidth="303.0" text="Diary-Text" />
                           </columns>
                         </TableView>
                      </children>

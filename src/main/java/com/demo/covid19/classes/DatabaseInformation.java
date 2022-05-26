@@ -78,6 +78,17 @@ public class DatabaseInformation {
         return 0;
     }
 
+    public int getCountOfRiskTaker() throws Exception {
+        String countOfRiskTakerSQL = "select count(1) as total from user_symptoms where no_symptoms = 0";
+        PreparedStatement ps = connectionDatabase.getConn().prepareStatement(countOfRiskTakerSQL);
+        ResultSet rs = ps.executeQuery();
+
+        if (rs.next()) {
+            return rs.getInt(1);
+        }
+        return 0;
+    }
+
     public int getCountCough(){
         return countCough;
     }
