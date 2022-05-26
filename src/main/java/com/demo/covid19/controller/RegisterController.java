@@ -1,6 +1,8 @@
 package com.demo.covid19.controller;
 
 import com.demo.covid19.connection.ConnectionDatabase;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,21 +39,25 @@ public class RegisterController extends GoToScene {
     private Parent root;
 
     @FXML
-    public int changeVisibility(ActionEvent event) {
-        if (checkbox.isSelected()) {
-            hintPasswordText.setText(passwordField.getText());
-            hintPasswordText.setVisible(true);
-            passwordField.setVisible(false);
-            return 0;
-        }
-        passwordField.setText(hintPasswordText.getText());
-        passwordField.setVisible(true);
-        hintPasswordText.setVisible(false);
-        return 0;
+    public void changeVisibility(ActionEvent event) {
+        hintPasswordText.setVisible(checkbox.isSelected());
+        passwordField.setVisible(!checkbox.isSelected());
     }
 
     public void init() {
+
         hintPasswordText.setVisible(false);
+        hintPasswordText.textProperty().bindBidirectional(passwordField.textProperty());
+        userText.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    userText.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+
+            }
+        });
     }
 
 
@@ -71,7 +77,7 @@ public class RegisterController extends GoToScene {
         ConnectionDatabase connectionDatabase = new ConnectionDatabase();
         Statement stmt = connectionDatabase.getConn().createStatement();
 
-        String selectDiarySQL = "select * from users where username = ? and id = ? limit 1";
+        String selectDiarySQL = "select * from users where username = ? or id = ? limit 1";
         PreparedStatement ps = connectionDatabase.getConn().prepareStatement(selectDiarySQL);
         ps.setString(1, username);
         ps.setInt(2, userId);
@@ -98,7 +104,6 @@ public class RegisterController extends GoToScene {
             ps2.setString(3, hashedPassword);
             ps2.executeUpdate();
         }
-
 
 
     }
